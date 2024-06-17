@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="locale.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3c2c35f51d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <div id="tabletParaffin" style="display: none;">
+        <div id="mainscreen" class="scomparsa">
+           <div id="altaparte">
+              <div id="forensictablet">FORENSIC POLICE</div>
+              <div id="forensictabletsubt">Welcome to Forensic Police Database</div>
+           </div>
+           <div id="content">
+              <div id="optionlist" onmousedown="sound1.play()" onclick="newtestpage()">
+                 <i class="fa-solid fa-flask" aria-hidden="true"></i>
+                 <div id="titleanddesc">
+                    <div id="titlecontent">Paraffin Glove</div>
+                    <div id="desccontent">Test a person with Paraffin Glove to see if he used a gun in the past days.</div>
+                 </div>
+                 <div id="gotopage">&gt;</div>
+              </div>
+              <div id="optionlist" onmousedown="sound1.play()" onclick="seetests()">
+                 <i class="fa-solid fa-print" aria-hidden="true"></i>
+                 <div id="titleanddesc">
+                    <div id="titlecontent" class ="seetest">See tests</div>
+                    <div id="desccontent" class = "seetestdesc">Results of Paraffin Glove Forensic test</div>
+                 </div>
+                 <div id="gotopage">&gt;</div>
+              </div>
+           </div>
+        </div>
+        <div id="newTest" style="display: none;" class="">
+           <div id="titleandbackbutton">
+              <div id="backbutton" onmousedown="sound1.play()" onclick="homepageClick()">
+                 <i class="fa-solid fa-house" aria-hidden="true"></i>
+              </div>
+              <div id="titlesitua">PARAFFIN TEST</div>
+           </div>
+           <div id="contenttestpart">
+              <div id="sinistra">
+                 <div id="toppart">
+                    <div id="titolosinistra">Select a player</div>
+                    <div id="buttonrefresh">
+                       <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>
+                    </div>
+                 </div>
+                 <div id="tableselect">
+                 </div>
+              </div>
+              <div id="destra">
+                 <div id="titolosinistra" class = "testStubInfo">Paraffin Glove</div>
+                 <div id="descrizionedestra">With this test you will be able to check if the player has used a firearm in the last 7 days.</div>
+              </div>
+           </div>
+        </div>
+        <div id="resultStub" style="display: none;" class="">
+           <div id="altaparte">
+              <div id="forensictablet" class ="stubResultTitle">STUB RESULT</div>
+              <div id="testtext">Stub result for player - saved in Database</div>
+           </div>
+           <div id="tableresult">
+              <div id="resulttitle">Stub test result:</div>
+              <div id="result" class = "resultSituazza">POSITIVE</div>
+              <div id="infotitle">Player informations</div>
+              <div id="namelastnameDiv">
+                 <div id="fullname" class = "fullname">Fullname </div>
+                 <div id="namelastname" class = "fullnameresult">--</div>
+              </div>
+              <div id="namelastnameDiv">
+                 <div id="fullname" class ="dobtrans">DOB </div>
+                 <div id="namelastname" class = "dobresult">--</div>
+              </div>
+              <div id="backHome" onmousedown="sound1.play()" onclick="homepageClickResult()" >
+                 <i class="fa-solid fa-house" aria-hidden="true"></i>
+                 <div id="hometext">Home</div>
+              </div>
+           </div>
+        </div>
+        <div id="stubDb" style="display: none;" class="">
+           <div id="titleandbackbutton">
+              <div id="backbutton" onmousedown="sound1.play()" onclick="homepageClickStub()">
+                 <i class="fa-solid fa-house" aria-hidden="true"></i>
+              </div>
+              <div id="titlesitua" class ="titleStubDb">STUB DATABASE</div>
+           </div>
+           <div id="contenttestpart">
+              <div id="sinistra">
+                 <div id="toppart">
+                    <div id="titolosinistra" class = "selectTest">Select a test</div>
+                    <div id="buttonrefresh" onmousedown="sound1.play()" onclick="refreshAll()">
+                       <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>
+                    </div>
+                 </div>
+                 <input id="search" oninput="search()" placeholder="Search for Fullname...">
+                 <div id="dbTable">
+                    
+                 </div>
+              </div>
+              <div id="destraDb">
+                 <div id="infopart">
+                    <div id="titleInfoPart">Stub test result:</div>
+                    <div id="subtitleinfopart">?????</div>
+                    <div id="namelastnameDivDb">
+                       <div id="fullnameDb">Fullname </div>
+                       <div id="fullnamefffDb" class = "nameCazz">--</div>
+                    </div>
+                    <div id="namelastnameDivDb">
+                       <div id="fullnameDb" class = "dobDb">DOB</div>
+                       <div id="fullnamefffDb" class = "dobcazz">--</div>
+                    </div>
+                    <div id="namelastnameDivDb">
+                       <div id="fullnameDb" class ="testDate">Test Date</div>
+                       <div id="fullnamefffDb" class  ="testcazz">--</div>
+                    </div>
+                    <div id="bottoniOpzioni">
+                       <div id="bottoneopzione" onclick = "elimina()">
+                          <i class="fa-solid fa-trash" aria-hidden="true"></i>
+                          <div id="buttontitle">Delete</div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+   </div>
+   <div id="areYouSure" style="display: none;">
+      <div id="suretoDelete" style="display: none;">
+          <div id="titleDelete">Are you sure?</div>
+         <div id="descriptionDelete">Take care: This action is not reversable!</div>
+         <div id="options">
+            <div class="button confirm" id = "confirm" onclick = "confirmDelete()">Confirm</div>
+            <div class="button cancel" id  ="cancel" onclick = "cancelDelete()">Cancel</div>
+         </div>
+      </div>        
+   </div>
+</body>
+<script>
+    var sound1 = new Audio();
+    sound1.src = "suoni/interfaccia.wav";
+  </script>
+</html>
